@@ -1,9 +1,6 @@
 /*** Simple SQL Queries ***/
 -- https://pgexercises.com/questions/basic/
-
-/Users/yangweichle/Desktop/schema-horizontal.svg
-
-https://pgexercises.com/img/schema-horizontal.svg
+-- https://pgexercises.com/img/schema-horizontal.svg
 
 
 /* Retrieve everything from a table
@@ -141,10 +138,7 @@ SELECT firstname,
 
 /*** Joins and Subqueries ***/
 -- https://pgexercises.com/questions/joins/
-
-/Users/yangweichle/Desktop/schema-horizontal.svg
-
-https://pgexercises.com/img/schema-horizontal.svg
+-- https://pgexercises.com/img/schema-horizontal.svg
 
 
 /* Retrieve the start times of members' bookings
@@ -216,9 +210,9 @@ SELECT m.firstname AS memfname,
            memfname;
 
 
-*/ Produce a list of all members who have used a tennis court
+/* Produce a list of all members who have used a tennis court
 
-Question: How can you produce a list of all members who have used a tennis court? Include in your output the name of the court, and the name of the member formatted as a single column. Ensure no duplicate data, and order by the member name followed by the facility name. /*
+Question: How can you produce a list of all members who have used a tennis court? Include in your output the name of the court, and the name of the member formatted as a single column. Ensure no duplicate data, and order by the member name followed by the facility name. */
 
 SELECT DISTINCT CONCAT(m.firstname, ' ', m.surname) AS member, /* Note: Can concatenate strings using m.firstname || ' ' || m.surname as member */
        f.name AS facility
@@ -289,10 +283,7 @@ SELECT c.member,
 
 /*** Modifying data ***/
 -- https://pgexercises.com/questions/updates/
-
-/Users/yangweichle/Desktop/schema-horizontal.svg
-
-https://pgexercises.com/img/schema-horizontal.svg
+-- https://pgexercises.com/img/schema-horizontal.svg
 
 
 /* Insert some data into a table
@@ -392,10 +383,7 @@ DELETE FROM cd.members
 
 /*** Aggregation ***/
 -- https://pgexercises.com/questions/aggregates/
-
-/Users/yangweichle/Desktop/schema-horizontal.svg
-
-https://pgexercises.com/img/schema-horizontal.svg
+-- https://pgexercises.com/img/schema-horizontal.svg
 
 
 /* Count the number of facilities
@@ -544,7 +532,7 @@ SELECT rev.name,
 
 Question: Output the facility id that has the highest number of slots booked. For bonus points, try a version without a LIMIT clause. This version will probably look messy! */
 
-/* SIMPLEST SOLUTION...BUT IN THE EVENT OF A TIE, IT WILL ONLY OUTPUT ONE RESULT
+/* SIMPLEST SOLUTION...BUT IN THE EVENT OF A TIE, IT WILL ONLY OUTPUT ONE RESULT */
 SELECT facid,
        SUM(slots) AS "Total Slots"
   FROM cd.bookings
@@ -774,7 +762,6 @@ SELECT sub.name,
            sub.name;
 
 
-
 /* Calculate the payback time for each facility
 
 Question: Based on the 3 complete months of data so far, calculate the amount of time each facility will take to repay its cost of ownership. Remember to take into account ongoing monthly maintenance. Output facility name and payback time in months, order by facility name. Don't worry about differences in month lengths, we're only looking for a rough value here! */
@@ -826,10 +813,7 @@ SELECT dategen.date,
 
 /*** Working with Timestamps ***/
 -- https://pgexercises.com/questions/date/
-
-/Users/yangweichle/Desktop/schema-horizontal.svg
-
-https://pgexercises.com/img/schema-horizontal.svg
+-- https://pgexercises.com/img/schema-horizontal.svg
 
 
 /* Produce a timestamp for 1 a.m. on the 31st of August 2012
@@ -941,10 +925,7 @@ SELECT sub.name,
 
 /*** String Operations ***/
 -- https://pgexercises.com/questions/string/
-
-/Users/yangweichle/Desktop/schema-horizontal.svg
-
-https://pgexercises.com/img/schema-horizontal.svg
+-- https://pgexercises.com/img/schema-horizontal.svg
 
 
 /* Format the names of members
@@ -1039,10 +1020,7 @@ SELECT memid,
 
 /*** Recursive Queries ***/
 -- https://pgexercises.com/questions/recursive/
-
-/Users/yangweichle/Desktop/schema-horizontal.svg
-
-https://pgexercises.com/img/schema-horizontal.svg
+-- https://pgexercises.com/img/schema-horizontal.svg
 
 
 /* Find the upward recommendation chain for member ID 27
